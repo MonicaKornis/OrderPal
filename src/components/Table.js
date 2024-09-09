@@ -7,22 +7,25 @@ import {removeUnderscore } from '../utils/utils';
 const OrderTable = styled.table`
     font-size: 13px;
     margin-top: 20px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    border-collapse: collapse; 
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    border-collapse: collapse;
     max-height: 600px;
     overflow: scroll;
-    width: 100%; 
-    border-collapse: collapse; 
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 13px;
+    border: 1px solid #80808047;
 `;
 
 const Column = styled.th`
-   height: 40px;
-   background-color: #ebe7e7cc;
-   font-size: 15px;
-   weight: 600;
-   padding: 1% 1.2% 1% 1.4%;
-   text-align: left;
-   border-bottom: 1px solid #cccc;
+    height: 40px;
+    /* background-color: #ebe7e7cc; */
+    font-size: 14px;
+    weight: 600;
+    padding: 0.8% 1.2% 0.8% 1.8%;
+    text-align: left;
+    border-bottom: 1px solid #cccc;
+    color: #434343;
 `;
 
 const Table = React.memo(({orderList, searchTerm}) => {

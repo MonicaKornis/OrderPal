@@ -9,7 +9,7 @@ const orderStatusChange = (prevProps, nextProps) => {
 }
 
 const TableRowDisplay = styled.tr`
-    background-color: ${({ value}) => parseInt(value) % 2 === 0 ? 'white' : '#ebe7e7cc'};
+    // background-color: ${({ value}) => parseInt(value) % 2 === 0 ? 'white' : '#ebe7e7cc'};
     height: 50px;
     border-bottom: 1px solid #d5d1d1cc;
     padding-left: 1px;

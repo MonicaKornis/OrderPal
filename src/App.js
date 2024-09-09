@@ -106,7 +106,7 @@ function App() {
   }, []);
   
   let ordersToDisplay = searchQuery ? filteredList?.orders : orderList?.orders;
-  //ORDER DASHBOARD FILTERES TOTAL ORDER BUT NOT COOKED, INTRANSIT, ect - BUG
+  //ORDER DASHBOARD FILTERES TOTAL ORDER BUT NOT COOKED, INTRANSIT,
 
   return (
     <AppContainer>
