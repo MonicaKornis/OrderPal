@@ -14,9 +14,9 @@ const SearchInput = styled.input`
     background: transparent url(${ImgSrc}) no-repeat 12px;
     font-size: 12px;
     padding: 9px 36px 7px 40px;
-    border: 1px solid #928f8f;;
+    border: 1px solid #80808047;
     &::placeholder {
-    color: #928f8f;
+    color: #80808085;
     }
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

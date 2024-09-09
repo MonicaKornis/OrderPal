@@ -5,7 +5,8 @@ import { ColorVariables, BackgroundColorVariables } from '../constants';
 
 const Cell = styled.td`
     font-weight: 500;
-    padding: 1% 1% 1.4% 1.5%;
+    // padding: 1% 1% 1.4% 1.5%;
+    padding: 1.2% 1.3% 1.2% 1.8%;
     min-width: 100px;
 `;
 
