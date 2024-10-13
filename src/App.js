@@ -72,7 +72,7 @@ const ContentSection = styled.div`
 function App() {
   const [filteredList, setFilteredList] = useState(null)
   const [isConnected, setIsConnected] = useState(socket.connected);
-  const [orderList, setOrderList] = useState({orders: {}, delievered: {}, inTransit: {},  cooked: {}, cancelled: {}});
+  const [orderList, setOrderList] = useState({orders: {}, delivered: {}, inTransit: {},  cooked: {}, canceled: {}});
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearchInputChange = (e) => {
@@ -107,6 +107,10 @@ function App() {
   
   let ordersToDisplay = searchQuery ? filteredList?.orders : orderList?.orders;
   //ORDER DASHBOARD FILTERES TOTAL ORDER BUT NOT COOKED, INTRANSIT,
+  let cooked = searchQuery ? filteredList?.cooked || 0 : Object.values(orderList?.cooked).length || 0;
+  let inTransit = searchQuery ? filteredList?.inTransit || 0 : Object.values(orderList?.inTransit).length || 0;
+  let delivered = searchQuery ? filteredList?.delivered || 0 : Object.values(orderList?.delivered).length || 0;
+  let canceled = searchQuery ? filteredList?.canceled || 0 : Object.values(orderList?.canceled).length || 0;
 
   return (
     <AppContainer>
@@ -123,19 +127,19 @@ function App() {
             </OrderCountSection>
             <OrderCountSection>
               {/* <HeaderText>Cooked Count</HeaderText> */}
-              <CountNumber  value={'COOKED_DASH'}>{Object.values(orderList?.cooked || {}).length || 0}</CountNumber><CountNumberText>Cooked</CountNumberText>  
+              <CountNumber  value={'COOKED_DASH'}>{cooked}</CountNumber><CountNumberText>Cooked</CountNumberText>  
             </OrderCountSection>
             <OrderCountSection>
               {/* <HeaderText>In Transit Count</HeaderText> */}
-              <CountNumber  value={'IN_TRANSIT_DASH'}>{Object.values(orderList.inTransit || {}).length || 0}</CountNumber><CountNumberText>In Transit</CountNumberText>  
+              <CountNumber  value={'IN_TRANSIT_DASH'}>{inTransit}</CountNumber><CountNumberText>In Transit</CountNumberText>  
             </OrderCountSection>
             <OrderCountSection>
               {/* <HeaderText>Delivered Count</HeaderText> */}
-              <CountNumber  value={'DELIVERED_DASH'}>{Object.values(orderList.delivered || {}).length || 0}</CountNumber><CountNumberText>Delivered</CountNumberText>  
+              <CountNumber  value={'DELIVERED_DASH'}>{delivered}</CountNumber><CountNumberText>Delivered</CountNumberText>  
             </OrderCountSection>
             <OrderCountSection>
               {/* <HeaderText>Canceled Count</HeaderText> */}
-              <CountNumber  value={'CANCELLED'}>{Object.values(orderList.cancelled || {}).length || 0}</CountNumber><CountNumberText>  Cancelled</CountNumberText>  
+              <CountNumber  value={'CANCELLED'}>{canceled}</CountNumber><CountNumberText>  Cancelled</CountNumberText>  
             </OrderCountSection>
           </OrderDashboard>
         </HeaderSection>
