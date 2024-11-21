@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/ad6b3eae-915f-43e8-9245-48f5d4026f10
 
 
 **Search Functionality:** <br>
-Price matching function will return result if the price contains the search query string. 
+Price matching function will return result if the search query string partically matches the price. 
 
 https://github.com/user-attachments/assets/5fd9daa5-f59d-41d5-897a-3b975cd076b6
 
