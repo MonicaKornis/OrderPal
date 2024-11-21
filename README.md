@@ -5,7 +5,7 @@ OrderPal is an application built with React and Socket.io. OrderPal displays rea
 https://github.com/user-attachments/assets/ad6b3eae-915f-43e8-9245-48f5d4026f10
 
 
-**Search Functionality**
+**Search Functionality:** <br>
 Price matching function will return result if the price contains the search query string. 
 
 https://github.com/user-attachments/assets/5fd9daa5-f59d-41d5-897a-3b975cd076b6
